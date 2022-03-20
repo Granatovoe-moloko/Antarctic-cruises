@@ -1,0 +1,52 @@
+.header {
+  padding: 35px 103px 0;
+  display: flex;
+  justify-content: space-between;
+  max-height: 87px;
+  z-index: 2;
+}
+
+.header__logo-image {
+  &--tablet {
+    display: none;
+  }
+
+  &--mobile {
+    display: none;
+  }
+}
+
+@include vp-1365 {
+  .header {
+    padding: 30px 45px 0;
+    max-height: 80px;
+  }
+
+  .header__logo-image {
+    &--desktop {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+    }
+  }
+}
+
+@include vp-767 {
+  .header {
+    padding: 20px 15px 0;
+    position: relative;
+    max-height: 42px;
+  }
+
+  .header__logo-image {
+    &--mobile {
+      display: block;
+    }
+
+    &--tablet {
+      display: none;
+    }
+  }
+}

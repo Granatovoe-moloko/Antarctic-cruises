@@ -1,0 +1,128 @@
+.cruises {
+  padding: 120px 103px;
+}
+
+.cruises__heading {
+  font-weight: 600;
+  @include text(28px, 42px);
+  color: $tangaroa;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  width: fit-content;
+}
+
+.cruises__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cruises__item {
+  width: 25%;
+  margin-bottom: 30px;
+
+  &:hover,
+  &:focus {
+    & .cruises__image {
+      display: none;
+    }
+
+    & .cruises__item-heading {
+      position: static;
+    }
+
+    & .cruises__item-wrapper {
+      padding-top: 35px;
+    }
+  }
+}
+
+.cruises__item-wrapper {
+  background-color: $tangaroa;
+  margin: 0 15px;
+  padding: 87px 25px 85px;
+  box-sizing: border-box;
+  height: 100%;
+  position: relative;
+}
+
+.cruises__image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.cruises__item-heading {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  max-width: 200px;
+  z-index: 3;
+  margin: 0;
+  margin-bottom: 25px;
+  font-weight: 500;
+  @include text(18px, 27px);
+  color: $alice-blue;
+}
+
+.cruises__info-list {
+  margin: 0;
+}
+
+.cruises__info-item {
+  margin-bottom: 10px;
+  font-weight: 500;
+  @include text(14px, 20px);
+  color: $alice-blue;
+}
+
+.cruises__info-text {
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 20px;
+  @include text(14px, 20px);
+  color: $quartz;
+}
+
+.cruises__reserve {
+  text-decoration: none;
+  display: block;
+  @include sizes(210px, 40px);
+  margin: 0 auto;
+  background-color: $alice-blue;
+  color: $tangaroa;
+  font-weight: 600;
+  @include text(14px, 21px);
+  text-align: center;
+  padding: 10px 40px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 0;
+}
+
+@include vp-1365 {
+  .cruises__item {
+    width: 50%;
+  }
+
+  .cruises__heading {
+    @include text(26px, 39px);
+  }
+}
+
+@include vp-767 {
+  .cruises__item {
+    width: 100%;
+  }
+}

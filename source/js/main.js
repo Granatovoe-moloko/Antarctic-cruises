@@ -1,46 +1,44 @@
-import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
+const headerMenu = document.querySelector('.header-menu');
+const headerButton = document.querySelector('.header-menu__button');
+const headerLogoMobile = document.querySelector('.header__logo-image--mobile');
 
-// ---------------------------------
+const isEscapeKey = (evt) => evt.keyCode === 27;
 
-window.addEventListener('DOMContentLoaded', () => {
+const showMobileMenu = () => {
+  headerMenu.classList.remove('header-menu--nojs');
+  headerLogoMobile.classList.add('header__logo-image--mobile-visible');
 
-  // Utils
-  // ---------------------------------
-
-  iosVhFix();
-
-  // Modules
-  // ---------------------------------
-
-  // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
-  // в load следует добавить скрипты, не участвующие в работе первого экрана
-  window.addEventListener('load', () => {
-    initModals();
+  headerButton.addEventListener('click', function () {
+    if (headerMenu.classList.contains('header-menu--opened')) {
+      headerMenu.classList.remove('header-menu--opened');
+      headerMenu.classList.add('header-menu--closed');
+      headerLogoMobile.classList.add('header__logo-image--mobile-visible');
+    } else {
+      headerMenu.classList.remove('header-menu--closed');
+      headerMenu.classList.add('header-menu--opened');
+      headerLogoMobile.classList.remove('header__logo-image--mobile-visible');
+    }
   });
-});
 
-// ---------------------------------
+  const closeMenuEscape = (evt) => {
+    if (isEscapeKey(evt)) {
+      headerMenu.classList.remove('header-menu--opened');
+      headerMenu.classList.add('header-menu--closed');
+      headerLogoMobile.classList.add('header__logo-image--mobile-visible');
+    }
+  };
 
-// ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.
+  document.addEventListener('keydown', closeMenuEscape);
 
-// привязывайте js не на классы, а на дата атрибуты (data-validate)
+  document.addEventListener('click', (evt) => {
+    const withinHeaderMenu = evt.composedPath().includes(headerMenu);
 
-// вместо модификаторов .block--active используем утилитарные классы
-// .is-active || .is-open || .is-invalid и прочие (обязателен нейминг в два слова)
-// .select.select--opened ❌ ---> [data-select].is-open ✔️
+    if (!withinHeaderMenu) {
+      headerMenu.classList.remove('header-menu--opened');
+      headerMenu.classList.add('header-menu--closed');
+      headerLogoMobile.classList.add('header__logo-image--mobile-visible');
+    }
+  });
+};
 
-// выносим все в дата атрибуты
-// url до иконок пинов карты, настройки автопрокрутки слайдера, url к json и т.д.
-
-// для адаптивного JS используейтся matchMedia и addListener
-// const breakpoint = window.matchMedia(`(min-width:1024px)`);
-// const breakpointChecker = () => {
-//   if (breakpoint.matches) {
-//   } else {
-//   }
-// };
-// breakpoint.addListener(breakpointChecker);
-// breakpointChecker();
-
-// используйте .closest(el)
+showMobileMenu();

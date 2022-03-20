@@ -1,0 +1,81 @@
+.lead {
+  height: 650px;
+  margin-top: -87px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.lead__wrapper {
+  height: 100%;
+  background: $tangaroa-70 no-repeat;
+  background-image: url(../img/content/lead.jpg);
+  background-size: cover;
+  background-position: 50% 90%;
+  min-width: 1366px;
+  padding: 283px 198px;
+  box-sizing: border-box;
+
+  @media (min-resolution: 2dppx) and (min-width: 1366px) {
+    background-image: url(../img/content/lead@2x.jpg);
+  }
+}
+
+.lead__heading {
+  margin: 0;
+  margin-bottom: 30px;
+  font-weight: 700;
+  @include text(54px, 66px);
+  color: $alice-blue;
+}
+
+.lead__text {
+  margin: 0;
+  @include text(20px, 24px);
+  color: $alice-blue;
+}
+
+@include vp-1365 {
+  .lead {
+    height: 638px;
+    margin-top: -80px;
+  }
+
+  .lead__wrapper {
+    padding: 280px 45px;
+    background-image: url(../img/content/lead-tablet.jpg);
+    min-width: 768px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(../img/content/lead-tablet@2x.jpg);
+    }
+  }
+
+  .lead__heading {
+    @include text(50px, 61px);
+  }
+
+  .lead__text {
+    @include text(18px, 22px);
+  }
+}
+
+@include vp-767 {
+  .lead {
+    height: 500px;
+    margin-top: -42px;
+  }
+
+  .lead__wrapper {
+    min-width: 320px;
+    padding: 185px 15px;
+  }
+
+  .lead__heading {
+    margin-bottom: 25px;
+    @include text(36px, 45px);
+  }
+
+  .lead__text {
+    @include text(16px, 22px);
+  }
+}
