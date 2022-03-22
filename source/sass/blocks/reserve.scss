@@ -163,5 +163,12 @@ label[for="agreement"] {
 
   .reserve__form-text {
     @include text(18px, 25px);
+    text-align: center;
+  }
+
+  label[for="agreement"] {
+    width: calc(100% - 20px);
+    padding-left: 10px;
+    box-sizing: border-box;
   }
 }

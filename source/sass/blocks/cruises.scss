@@ -112,6 +112,10 @@
 }
 
 @include vp-1365 {
+  .cruises {
+    padding: 100px 45px;
+  }
+
   .cruises__item {
     width: 50%;
   }
@@ -122,6 +126,14 @@
 }
 
 @include vp-767 {
+  .cruises {
+    padding: 65px 15px;
+  }
+
+  .cruises__item-wrapper {
+    margin: 0;
+  }
+
   .cruises__item {
     width: 100%;
   }
