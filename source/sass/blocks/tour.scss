@@ -6,23 +6,29 @@
 }
 
 .tour__wrapper {
-  width: calc(50% - 103px);
+  width: 50%;
+
+  &:first-child {
+    padding-right: 88px;
+  }
 }
 
-.tour__heading {
-  margin: 66px 0 40px 0;
+.tour h2 {
+  margin: 55px 0 25px 0;
   font-weight: 600;
+
   @include text(28px, 42px);
   color: $tangaroa;
 }
 
-.tour__text {
+.tour p {
   margin: 0;
   margin-bottom: 40px;
+
   @include text(16px, 24px);
 }
 
-.tour__image {
+.tour img {
   @include sizes(560px, 301px);
   margin: 0 auto;
   display: block;
@@ -30,20 +36,30 @@
 
 @include vp-1365 {
   .tour {
-    padding: 100px 45px;
+    padding: 90px 50px 55px;
   }
 
   .tour__wrapper {
-    width: calc(50% - 45px);
+    &:first-child {
+      padding-right: 0;
+    }
+
+    &:last-child {
+      padding-left: 20px;
+      box-sizing: border-box;
+      padding-top: 10px;
+    }
   }
 
-  .tour__heading {
+  .tour h2 {
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+
     @include text(26px, 36px);
+    max-width: 300px;
   }
 
-  .tour__image {
+  .tour img {
     @include sizes(324px, 264px);
   }
 }
@@ -56,13 +72,17 @@
 
   .tour__wrapper {
     width: 100%;
+
+    &:last-child {
+      padding-left: 0;
+    }
   }
 
-  .tour__heading {
+  .tour h2 {
     @include text(24px, 34px);
   }
 
-  .tour__image {
+  .tour img {
     @include sizes(290px, 186px);
   }
 }

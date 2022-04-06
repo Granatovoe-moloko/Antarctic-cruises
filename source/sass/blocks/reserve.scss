@@ -9,55 +9,59 @@
   grid-template-columns: 1fr 637px 403px 1fr;
   height: 100%;
   background: $solitude no-repeat;
-  background-image: url(../img/content/form-background.jpg);
+  background-image: url("../img/content/form-background.jpg");
   background-size: cover;
   box-sizing: border-box;
 
   @media (min-resolution: 2dppx) and (min-width: 1366px) {
-    background-image: url(../img/content/form-background@2x.jpg);
+    background-image: url("../img/content/form-background@2x.jpg");
   }
 }
 
 .reserve__info-container {
   grid-column: 2/3;
   margin-right: 30px;
-  padding-top: 178px;
+  align-self: center;
 }
 
 .reserve__form-container {
   grid-column: 3/4;
 }
 
-.reserve__heading {
+.reserve h2 {
   font-weight: 700;
+
   @include text(40px, 60px);
   color: $tangaroa;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
 }
 
-.reserve__text {
+.reserve p {
   @include text(18px, 27px);
   color: $tangaroa;
   margin: 0;
+  width: 350px;
 }
 
-.reserve__form {
-  padding: 50px;
+.reserve form {
+  padding: 45px 50px 50px;
   background-color: $tangaroa;
   display: flex;
   flex-wrap: wrap;
 }
 
-.reserve__form-text {
+.reserve form p {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
   font-weight: 500;
+
   @include text(18px, 27px);
   color: $alice-blue;
 }
 
-.reserve__form-field {
+.reserve input[type="text"],
+.reserve input[type="tel"] {
   width: 100%;
   height: 43px;
   margin-bottom: 20px;
@@ -67,31 +71,42 @@
   border: none;
 }
 
-.reserve__checkbox-field {
+.reserve input[type="email"] {
+  width: 100%;
+  height: 43px;
+  padding: 11px 16px;
+  box-sizing: border-box;
+  background-color: $alice-blue;
+  border: none;
+  margin-bottom: 25px;
+}
+
+.reserve input[type="checkbox"] {
   transform: scale(1.4);
   margin-right: 7px;
   opacity: 0;
 }
 
-.reserve__checkbox-field+label::before {
-  content: '';
+.reserve input[type="checkbox"] + label::before {
+  content: "";
   display: block;
+
   @include sizes(18px, 18px);
   background: no-repeat;
-  background-image: url(../img/svg/checkbox.svg);
+  background-image: url("../img/svg/checkbox.svg");
   position: absolute;
   bottom: 0;
   left: -20px;
 }
 
-.reserve__checkbox-field:checked+label::before {
-  background-image: url(../img/svg/checkbox-checked.svg);
+.reserve input[type="checkbox"]:checked + label::before {
+  background-image: url("../img/svg/checkbox-checked.svg");
 }
 
 label[for="agreement"] {
   @include text(10px, 13px);
   color: $alice-blue;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
   position: relative;
 }
 
@@ -100,14 +115,23 @@ label[for="agreement"] {
   box-sizing: border-box;
   background-color: $alice-blue;
   font-weight: 600;
+
   @include text(14px, 21px);
+  cursor: pointer;
   color: $tangaroa;
   border: none;
 }
 
+.reserve__button:hover,
+.reserve__button:focus,
+.reserve__button:active {
+  background-color: $solitude;
+  outline: none;
+}
+
 @include vp-1365 {
   .reserve__wrapper {
-    padding: 100px 175px;
+    padding: 85px 170px 100px;
     display: flex;
     flex-wrap: wrap;
     height: 100%;
@@ -124,19 +148,19 @@ label[for="agreement"] {
     margin: 0 auto;
   }
 
-  .reserve__heading {
+  .reserve h2 {
     @include text(34px, 51px);
     margin: 0 auto;
     width: fit-content;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
     text-align: center;
   }
 
-  .reserve__text {
+  .reserve p {
     margin: 0 auto;
-    width: fit-content;
-    margin-bottom: 60px;
+    margin-bottom: 55px;
     text-align: center;
+    max-width: 350px;
   }
 }
 
@@ -149,19 +173,20 @@ label[for="agreement"] {
     width: 290px;
   }
 
-  .reserve__form {
+  .reserve form {
     padding: 40px 30px;
   }
 
-  .reserve__heading {
+  .reserve h2 {
     @include text(24px, 31px);
   }
 
-  .reserve__text {
+  .reserve p {
     margin-bottom: 40px;
+    width: auto;
   }
 
-  .reserve__form-text {
+  .reserve form p {
     @include text(18px, 25px);
     text-align: center;
   }

@@ -6,10 +6,25 @@
 
 .footer__logo-image {
   margin-right: 40px;
+
   &--tablet,
   &--mobile {
     display: none;
   }
+}
+
+.footer__menu a {
+  font-weight: 500;
+
+  @include text(16px, 20px);
+  color: $alice-blue;
+  text-decoration: none;
+}
+
+.footer__menu a:hover,
+.footer__menu a:focus,
+.footer__menu a:active {
+  text-decoration: underline;
 }
 
 .footer__list {
@@ -21,15 +36,22 @@
   align-items: baseline;
 }
 
-.footer__item {
-  font-weight: 500;
-  @include text(16px, 20px);
-  color: $alice-blue;
+.footer__list li {
   margin-right: 33px;
   padding-top: 15px;
 }
 
-.footer__item:last-child {
+.footer__social .footer__list li {
+  margin-right: 27px;
+}
+
+.footer__social a:hover,
+.footer__social a:focus,
+.footer__social a:active {
+  opacity: 0.7;
+}
+
+.footer__list li:last-child {
   margin-right: 0;
 }
 
@@ -45,34 +67,49 @@
 
 @include vp-1365 {
   .footer {
-    padding: 50px 45px;
+    padding: 50px 40px 50px 50px;
   }
 
   .footer__logo-image {
     margin-right: 25px;
+
     &--desktop {
       display: none;
     }
+
     &--tablet {
       display: block;
     }
   }
 
-  .footer__item {
-    @include text(12px, 15px);
+  .footer__list li {
     margin-right: 23px;
     padding-top: 0;
+  }
+
+  .footer__menu a {
+    @include text(12px, 15px);
+  }
+
+  .footer__social .footer__list li {
+    margin-right: 23px;
+  }
+
+  .footer__list li:last-child {
+    margin-right: 0;
   }
 
   .footer__social-image {
     &--tablet {
       display: block;
     }
+
     &--desktop {
       display: none;
     }
   }
 }
+
 @include vp-767 {
   .footer {
     padding: 40px 15px;
@@ -82,9 +119,11 @@
   .footer__logo-image {
     margin-right: 40px;
     margin-bottom: 30px;
+
     &--tablet {
       display: none;
     }
+
     &--mobile {
       display: block;
     }
@@ -95,7 +134,7 @@
     margin-bottom: 30px;
   }
 
-  .footer__item {
+  .footer__list li {
     margin-right: 0;
     margin-bottom: 23px;
   }
@@ -104,7 +143,7 @@
     margin-left: 0;
   }
 
-  .footer__social .footer__item {
+  .footer__social .footer__list li {
     margin-right: 23px;
     margin-bottom: 0;
   }

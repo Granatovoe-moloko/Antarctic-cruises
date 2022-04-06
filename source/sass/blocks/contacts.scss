@@ -8,12 +8,12 @@
   grid-column: 1/2;
   min-height: 306px;
   margin-right: 20px;
-  background-image: url(../img/content/map-background.jpg);
+  background-image: url("../img/content/map-background.jpg");
   background-size: cover;
   background-position: 50% 90%;
 
   @media (min-resolution: 2dppx) and (min-width: 1366px) {
-    background-image: url(../img/content/map-background@2x.jpg);
+    background-image: url("../img/content/map-background@2x.jpg");
   }
 }
 
@@ -25,25 +25,28 @@
 
 .contacts__text {
   margin: 0;
-  margin-bottom: 45px;
+  margin-bottom: 30px;
   font-weight: 500;
+
   @include text(18px, 27px);
 }
 
 .contacts__adress {
   margin: 0;
-  margin-bottom: 33px;
+  margin-bottom: 23px;
+
   @include text(16px, 24px);
   padding-left: 30px;
   position: relative;
 
   &::before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
+
     @include sizes(18px, 22px);
     background-repeat: no-repeat;
-    background-image: url(../img/svg/pin-icon.svg);
+    background-image: url("../img/svg/pin-icon.svg");
     top: 0;
     left: 0;
   }
@@ -53,17 +56,19 @@
   margin: 0;
   text-decoration: none;
   color: $tangaroa;
+
   @include text(16px, 24px);
   padding-left: 30px;
   position: relative;
 
   &::before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
+
     @include sizes(18px, 18px);
     background-repeat: no-repeat;
-    background-image: url(../img/svg/phone-icon.svg);
+    background-image: url("../img/svg/phone-icon.svg");
     top: 0;
     left: 0;
   }
@@ -73,7 +78,7 @@
   .contacts {
     padding: 100px 45px;
     grid-template-columns: 50% 50%;
-    grid-column-gap: 30px;
+    grid-column-gap: 20px;
   }
 
   .contacts__map-wrapper {
@@ -86,7 +91,11 @@
   }
 
   .contacts__text {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+  }
+
+  .contacts__adress {
+    padding-left: 27px;
   }
 }
 

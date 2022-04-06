@@ -1,13 +1,14 @@
 .cruises {
-  padding: 120px 103px;
+  padding: 110px 103px 90px 103px;
 }
 
-.cruises__heading {
+.cruises h2 {
   font-weight: 600;
+
   @include text(28px, 42px);
   color: $tangaroa;
   margin: 0 auto;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   width: fit-content;
 }
 
@@ -19,18 +20,19 @@
   flex-wrap: wrap;
 }
 
-.cruises__item {
+.cruises__list li {
   width: 25%;
   margin-bottom: 30px;
 
   &:hover,
   &:focus {
-    & .cruises__image {
+    & img {
       display: none;
     }
 
-    & .cruises__item-heading {
+    & h3 {
       position: static;
+      margin-top: -10px;
     }
 
     & .cruises__item-wrapper {
@@ -42,13 +44,13 @@
 .cruises__item-wrapper {
   background-color: $tangaroa;
   margin: 0 15px;
-  padding: 87px 25px 85px;
+  padding: 87px 25px 70px;
   box-sizing: border-box;
   height: 100%;
   position: relative;
 }
 
-.cruises__image {
+.cruises__list img {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -60,15 +62,16 @@
   z-index: 2;
 }
 
-.cruises__item-heading {
+.cruises__list h3 {
   position: absolute;
-  bottom: 30px;
+  bottom: 10px;
   left: 30px;
   max-width: 200px;
   z-index: 3;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   font-weight: 500;
+
   @include text(18px, 27px);
   color: $alice-blue;
 }
@@ -78,8 +81,9 @@
 }
 
 .cruises__info-item {
-  margin-bottom: 10px;
+  margin-bottom: 2px;
   font-weight: 500;
+
   @include text(14px, 20px);
   color: $alice-blue;
 }
@@ -87,7 +91,8 @@
 .cruises__info-text {
   font-weight: 400;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+
   @include text(14px, 20px);
   color: $quartz;
 }
@@ -95,11 +100,13 @@
 .cruises__reserve {
   text-decoration: none;
   display: block;
+
   @include sizes(210px, 40px);
   margin: 0 auto;
   background-color: $alice-blue;
   color: $tangaroa;
   font-weight: 600;
+
   @include text(14px, 21px);
   text-align: center;
   padding: 10px 40px;
@@ -111,17 +118,35 @@
   z-index: 0;
 }
 
+.cruises__reserve:hover,
+.cruises__reserve:focus,
+.cruises__reserve:active {
+  background-color: $solitude;
+}
+
 @include vp-1365 {
   .cruises {
-    padding: 100px 45px;
+    padding: 90px 45px 75px;
   }
 
-  .cruises__item {
+  .cruises__list li {
     width: 50%;
   }
 
-  .cruises__heading {
+  .cruises__item-wrapper {
+    padding-left: 40px;
+  }
+
+  .cruises__list h3 {
+    left: 40px;
+  }
+
+  .cruises h2 {
     @include text(26px, 39px);
+  }
+
+  .cruises__reserve {
+    width: 239px;
   }
 }
 
@@ -134,7 +159,7 @@
     margin: 0;
   }
 
-  .cruises__item {
+  .cruises__list li {
     width: 100%;
   }
 }

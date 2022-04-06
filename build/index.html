@@ -28,7 +28,7 @@
       </div>
 
       <div class="header-menu header-menu--closed header-menu--nojs">
-        <h2 class="header-menu__heading visually-hidden">Меню сайта</h2>
+        <h2 class="visually-hidden">Меню сайта</h2>
         <div class="header-menu__logo-wrapper">
           <svg class="header-menu__logo" width="42" height="22">
             <use xlink:href="img/sprite_auto.svg#blue-logo"></use>
@@ -36,17 +36,17 @@
         </div>
         <button class="header-menu__button" type="button" aria-label="закрыть/открыть меню"></button>
         <ul class="header-menu__list">
-          <li class="header-menu__item">
-            <a class="header-menu__link" href="#">Преимущества </a>
+          <li>
+            <a href="#advantages">Преимущества </a>
           </li>
-          <li class="header-menu__item">
-            <a class="header-menu__link" href="#">Направления</a>
+          <li>
+            <a href="#cruises">Направления</a>
           </li>
-          <li class="header-menu__item">
-            <a class="header-menu__link" href="#">Ближайшие круизы</a>
+          <li>
+            <a href="#cruises">Ближайшие круизы</a>
           </li>
-          <li class="header-menu__item">
-            <a class="header-menu__link" href="#">Контакты</a>
+          <li>
+            <a href="#contacts">Контакты</a>
           </li>
         </ul>
       </div>
@@ -55,61 +55,61 @@
     <main>
       <section class="lead">
         <div class="lead__wrapper">
-          <h1 class="lead__heading">Круизы в&nbsp;Антарктику</h1>
-          <p class="lead__text">Волшебный мир айсбергов и&nbsp;пингвинов</p>
+          <h1>Круизы в&nbsp;Антарктику</h1>
+          <p>Волшебный мир айсбергов и&nbsp;пингвинов</p>
         </div>
       </section>
 
       <section class="tour">
         <div class="tour__wrapper">
-          <h2 class="tour__heading">Путешествие на&nbsp;край Земли</h2>
-          <p class="tour__text">Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
+          <h2>Путешествие на&nbsp;край Земли</h2>
+          <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш&nbsp;круизный лайнер отвезет вас на&nbsp;край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
         </div>
         <div class="tour__wrapper">
           <picture>
             <source type="image/webp" media="(min-width: 1366px)" srcset="img/content/tour.webp 1x, img/content/tour@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/content/tour-tablet.webp 1x, img/content/tour-tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/content/tour-mobile.webp 1x, img/content/tour-mobile@2x.webp 2x">
-            <source media="(min-width: 1366px)" srcset="img/content/tour.jpg 1x, img/content/tour@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/content/tour-tablet.jpg 1x, img/content/tour-tablet@2x.jpg 2x">
-            <img class="tour__image" src="img/content/tour-mobile.jpg" srcset="img/content/tour-mobile@2x.jpg 2x" width="290" height="186" alt="три пингвина идут по снегу">
+            <!-- 1x: 560; 2x: 1120-->
+            <img src="img/content/tour.jpg" srcset="img/content/tour@2x.jpg 2x" width="290" height="186" alt="три пингвина идут по снегу">
           </picture>
         </div>
       </section>
 
-      <section class="advantages">
-        <h2 class="advantages__heading">Преимущества</h2>
+      <section class="advantages" id="advantages">
+        <h2>Преимущества</h2>
         <ul class="advantages__list">
-          <li class="advantages__item">
+          <li>
             <div class="advantages__item-wrapper advantages__item-wrapper--liner">
-              <h3 class="advantages__item-heading">Небольшой круизный лайнер</h3>
-              <p class="advantages__item-text">Круизный лайнер, рассчитанный всего&nbsp;лишь на&nbsp;300&nbsp;гостей, поможет избежать шума и&nbsp;очередей и&nbsp;даст возможность насладиться видами и&nbsp;природой.</p>
+              <h3>Небольшой круизный лайнер</h3>
+              <p>Круизный лайнер, рассчитанный всего лишь на&nbsp;300&nbsp;гостей, поможет избежать шума и&nbsp;очередей и&nbsp;даст возможность насладиться видами и&nbsp;природой.</p>
             </div>
           </li>
-          <li class="advantages__item">
+          <li>
             <div class="advantages__item-wrapper advantages__item-wrapper--all-inclusive">
-              <h3 class="advantages__item-heading">Система все включено</h3>
-              <p class="advantages__item-text">Все наши круизы работают по&nbsp;системе “Все&nbsp;Включено”. Великолепные блюда и&nbsp;безлимитный бар доступны для&nbsp;вас 24&nbsp;часа.</p>
+              <h3>Система все&nbsp;включено</h3>
+              <p>Все наши круизы работают по&nbsp;системе “Все&nbsp;Включено”. Великолепные блюда и&nbsp;безлимитный бар доступны для&nbsp;вас 24&nbsp;часа.</p>
             </div>
           </li>
-          <li class="advantages__item">
+          <li>
             <div class="advantages__item-wrapper advantages__item-wrapper--zodiac">
-              <h3 class="advantages__item-heading">Экскурсионные туры на&nbsp;Zodiac</h3>
-              <p class="advantages__item-text">Экскурсионные туры к&nbsp;берегам Антарктиды совершаются на&nbsp;оборудованных лодках типа Zodiac в&nbsp;сопровождении опытных экскурсоводов.</p>
+              <h3>Экскурсионные туры на&nbsp;Zodiac</h3>
+              <p>Экскурсионные туры к&nbsp;берегам Антарктиды совершаются на&nbsp;оборудованных лодках типа Zodiac в&nbsp;сопровождении опытных экскурсоводов.</p>
             </div>
           </li>
         </ul>
       </section>
 
-      <section class="cruises">
-        <h2 class="cruises__heading">Ближайшие круизы</h2>
+      <section class="cruises" id="cruises">
+        <h2>Ближайшие круизы</h2>
         <ul class="cruises__list">
-          <li class="cruises__item">
+          <li>
             <div class="cruises__item-wrapper">
-              <h3 class="cruises__item-heading">Круиз “Астория”</h3>
+              <h3>Круиз “Астория”</h3>
               <picture>
                 <source type="image/webp" srcset="img/content/astoria.webp 1x, img/content/astoria@2x.webp 2x">
-                <img class="cruises__image" src="img/content/astoria.jpg" srcset="img/content/astoria@2x.jpg 2x" width="260" height="386" alt="ледяная скала">
+                <!-- 1x: 260; 2x: 520-->
+                <img src="img/content/astoria.jpg" srcset="img/content/astoria@2x.jpg 2x" width="260" height="386" alt="ледяная скала">
               </picture>
               <dl class="cruises__info-list">
                 <dt class="cruises__info-item">Маршрут</dt>
@@ -121,16 +121,17 @@
                 <dt class="cruises__info-item">Цена</dt>
                 <dd class="cruises__info-text">от&nbsp;11500 $</dd>
               </dl>
-              <a href="" class="cruises__reserve">Забронировать</a>
+              <a href="#" class="cruises__reserve">Забронировать</a>
             </div>
           </li>
 
-          <li class="cruises__item">
+          <li>
             <div class="cruises__item-wrapper">
-              <h3 class="cruises__item-heading">Круиз “Элайн”</h3>
+              <h3>Круиз “Элайн”</h3>
               <picture>
                 <source type="image/webp" srcset="img/content/astoria.webp 1x, img/content/astoria@2x.webp 2x">
-                <img class="cruises__image" src="img/content/astoria.jpg" srcset="img/content/astoria@2x.jpg 2x" width="260" height="386" alt="ледяная скала">
+                <!-- 1x: 260; 2x: 520-->
+                <img src="img/content/astoria.jpg" srcset="img/content/astoria@2x.jpg 2x" width="260" height="386" alt="ледяная скала">
               </picture>
               <dl class="cruises__info-list">
                 <dt class="cruises__info-item">Маршрут</dt>
@@ -142,20 +143,21 @@
                 <dt class="cruises__info-item">Цена</dt>
                 <dd class="cruises__info-text">от&nbsp;14500&nbsp;$</dd>
               </dl>
-              <a href="" class="cruises__reserve">Забронировать</a>
+              <a href="#" class="cruises__reserve">Забронировать</a>
             </div>
           </li>
 
-          <li class="cruises__item">
+          <li>
             <div class="cruises__item-wrapper">
-              <h3 class="cruises__item-heading">Круиз “Атлантис”</h3>
+              <h3>Круиз “Атлантис”</h3>
               <picture>
                 <source type="image/webp" srcset="img/content/atlantis.webp 1x, img/content/atlantis@2x.webp 2x">
-                <img class="cruises__image" src="img/content/atlantis.jpg" srcset="img/content/atlantis@2x.jpg 2x" width="260" height="386" alt="ледяная скала">
+                <!-- 1x: 260; 2x: 520-->
+                <img src="img/content/atlantis.jpg" srcset="img/content/atlantis@2x.jpg 2x" width="260" height="386" alt="море с айсбергом">
               </picture>
               <dl class="cruises__info-list">
                 <dt class="cruises__info-item">Маршрут</dt>
-                <dd class="cruises__info-text">Аргентина - Южная Георгия и&nbsp;Южные Сандвичевы Острова - Антарктида</dd>
+                <dd class="cruises__info-text">Аргентина - Южная Георгия и&nbsp;Южные *</dd>
                 <dt class="cruises__info-item">Порт отправления</dt>
                 <dd class="cruises__info-text">Ушуайя</dd>
                 <dt class="cruises__info-item">Продолжительность</dt>
@@ -163,16 +165,17 @@
                 <dt class="cruises__info-item">Цена</dt>
                 <dd class="cruises__info-text">от&nbsp;14500&nbsp;$</dd>
               </dl>
-              <a href="" class="cruises__reserve">Забронировать</a>
+              <a href="#" class="cruises__reserve">Забронировать</a>
             </div>
           </li>
 
-          <li class="cruises__item">
+          <li>
             <div class="cruises__item-wrapper">
-              <h3 class="cruises__item-heading">Круиз “Одиссей”</h3>
+              <h3>Круиз “Одиссей”</h3>
               <picture>
                 <source type="image/webp" srcset="img/content/odissey.webp 1x, img/content/odissey@2x.webp 2x">
-                <img class="cruises__image" src="img/content/odissey.jpg" srcset="img/content/odissey@2x.jpg 2x" width="260" height="386" alt="ледяная скала">
+                <!-- 1x: 260; 2x: 520-->
+                <img src="img/content/odissey.jpg" srcset="img/content/odissey@2x.jpg 2x" width="260" height="386" alt="море с айсбергом">
               </picture>
               <dl class="cruises__info-list">
                 <dt class="cruises__info-item">Маршрут</dt>
@@ -184,20 +187,21 @@
                 <dt class="cruises__info-item">Цена</dt>
                 <dd class="cruises__info-text">от&nbsp;9700&nbsp;$</dd>
               </dl>
-              <a href="" class="cruises__reserve">Забронировать</a>
+              <a href="#" class="cruises__reserve">Забронировать</a>
             </div>
           </li>
 
-          <li class="cruises__item">
+          <li>
             <div class="cruises__item-wrapper">
-              <h3 class="cruises__item-heading">Круиз “Олимпия”</h3>
+              <h3>Круиз “Олимпия”</h3>
               <picture>
                 <source type="image/webp" srcset="img/content/olympia.webp 1x, img/content/olympia@2x.webp 2x">
-                <img class="cruises__image" src="img/content/olympia.jpg" srcset="img/content/olympia@2x.jpg 2x" width="260" height="386" alt="ледяная скала">
+                <!-- 1x: 260; 2x: 520-->
+                <img src="img/content/olympia.jpg" srcset="img/content/olympia@2x.jpg 2x" width="260" height="386" alt="ледяная скала и стая пингвинов">
               </picture>
               <dl class="cruises__info-list">
                 <dt class="cruises__info-item">Маршрут</dt>
-                <dd class="cruises__info-text">Аргентина - Фолклендские острова - Южная Георгия - Антарктида</dd>
+                <dd class="cruises__info-text">Аргентина - Фолклендские острова - Южная Георгия - *</dd>
                 <dt class="cruises__info-item">Порт отправления</dt>
                 <dd class="cruises__info-text">Ушуайя</dd>
                 <dt class="cruises__info-item">Продолжительность</dt>
@@ -205,16 +209,17 @@
                 <dt class="cruises__info-item">Цена</dt>
                 <dd class="cruises__info-text">от&nbsp;18600&nbsp;$</dd>
               </dl>
-              <a href="" class="cruises__reserve">Забронировать</a>
+              <a href="#" class="cruises__reserve">Забронировать</a>
             </div>
           </li>
 
-          <li class="cruises__item">
+          <li>
             <div class="cruises__item-wrapper">
-              <h3 class="cruises__item-heading">Круиз “Аврора”</h3>
+              <h3>Круиз “Аврора”</h3>
               <picture>
                 <source type="image/webp" srcset="img/content/aurora.webp 1x, img/content/aurora@2x.webp 2x">
-                <img class="cruises__image" src="img/content/aurora.jpg" srcset="img/content/aurora@2x.jpg 2x" width="260" height="386" alt="ледяная скала">
+                <!-- 1x: 260; 2x: 520-->
+                <img src="img/content/aurora.jpg" srcset="img/content/aurora@2x.jpg 2x" width="260" height="386" alt="ледяной пейзаж">
               </picture>
               <dl class="cruises__info-list">
                 <dt class="cruises__info-item">Маршрут</dt>
@@ -226,16 +231,17 @@
                 <dt class="cruises__info-item">Цена</dt>
                 <dd class="cruises__info-text">от&nbsp;11700&nbsp;$</dd>
               </dl>
-              <a href="" class="cruises__reserve">Забронировать</a>
+              <a href="#" class="cruises__reserve">Забронировать</a>
             </div>
           </li>
 
-          <li class="cruises__item">
+          <li>
             <div class="cruises__item-wrapper">
-              <h3 class="cruises__item-heading">Круиз “Леонор”</h3>
+              <h3>Круиз “Леонор”</h3>
               <picture>
                 <source type="image/webp" srcset="img/content/leonor.webp 1x, img/content/leonor@2x.webp 2x">
-                <img class="cruises__image" src="img/content/leonor.jpg" srcset="img/content/leonor@2x.jpg 2x" width="260" height="386" alt="ледяная скала">
+                <!-- 1x: 260; 2x: 520-->
+                <img src="img/content/leonor.jpg" srcset="img/content/leonor@2x.jpg 2x" width="260" height="386" alt="лодка в море">
               </picture>
               <dl class="cruises__info-list">
                 <dt class="cruises__info-item">Маршрут</dt>
@@ -247,16 +253,17 @@
                 <dt class="cruises__info-item">Цена</dt>
                 <dd class="cruises__info-text">от&nbsp;12500&nbsp;$</dd>
               </dl>
-              <a href="" class="cruises__reserve">Забронировать</a>
+              <a href="#" class="cruises__reserve">Забронировать</a>
             </div>
           </li>
 
-          <li class="cruises__item">
+          <li>
             <div class="cruises__item-wrapper">
-              <h3 class="cruises__item-heading">Круиз “Минион - 1”</h3>
+              <h3>Круиз “Минион - 1”</h3>
               <picture>
                 <source type="image/webp" srcset="img/content/minion.webp 1x, img/content/minion@2x.webp 2x">
-                <img class="cruises__image" src="img/content/minion.jpg" srcset="img/content/minion@2x.jpg 2x" width="260" height="386" alt="ледяная скала">
+                <!-- 1x: 260; 2x: 520-->
+                <img src="img/content/minion.jpg" srcset="img/content/minion@2x.jpg 2x" width="260" height="386" alt="море и ледяная скала">
               </picture>
               <dl class="cruises__info-list">
                 <dt class="cruises__info-item">Маршрут</dt>
@@ -268,7 +275,7 @@
                 <dt class="cruises__info-item">Цена</dt>
                 <dd class="cruises__info-text">от&nbsp;12300&nbsp;$</dd>
               </dl>
-              <a href="" class="cruises__reserve">Забронировать</a>
+              <a href="#" class="cruises__reserve">Забронировать</a>
             </div>
           </li>
         </ul>
@@ -277,30 +284,30 @@
       <section class="reserve">
         <div class="reserve__wrapper">
           <div class="reserve__info-container">
-            <h2 class="reserve__heading">Раннее бронирование</h2>
-            <p class="reserve__text">Забронируйте тур за&nbsp;3-6&nbsp;месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
+            <h2>Раннее бронирование</h2>
+            <p>Забронируйте тур за&nbsp;3-6&nbsp;месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
           </div>
           <div class="reserve__form-container">
-            <form class="reserve__form" action="url">
-              <p class="reserve__form-text">Оставьте заявку и&nbsp;мы свяжемся с&nbsp;вами в&nbsp;ближайшее время</p>
-              <input class="reserve__form-field" type="text" id="name" name="name" placeholder="Имя">
-              <input class="reserve__form-field" type="tel" id="phone" name="phone" placeholder="Телефон">
-              <input class="reserve__form-field" type="email" id="email" name="email" placeholder="Email">
-              <input class="reserve__checkbox-field" type="checkbox" id="agreement" name="agreement" checked>
+            <form action="url">
+              <p>Оставьте заявку и&nbsp;мы свяжемся с&nbsp;вами в&nbsp;ближайшее время</p>
+              <input type="text" id="name" name="name" placeholder="Имя" required>
+              <input type="tel" id="phone" name="phone" placeholder="Телефон" required>
+              <input type="email" id="email" name="email" placeholder="Email" required>
+              <input type="checkbox" id="agreement" name="agreement" checked required>
               <label for="agreement">Я согласен на&nbsp;обработку моих персональных данных</label>
-              <button class="reserve__button" type="button">Оставить заявку</button>
+              <button class="reserve__button" type="submit">Оставить заявку</button>
             </form>
           </div>
         </div>
       </section>
 
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <div class="contacts__map-wrapper">
           <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A7e36e879edcb2abf9a8cfdcea100d8587a09dc4698c76c071c3e345b4c56065a&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
         </div>
         <div class="contacts__info-wrapper">
           <p class="contacts__text">У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы вам все расскажем.</p>
-          <p class="contacts__adress">г. Санкт Петербург, ул.&nbsp;Большая Конюшенная, 19/8</p>
+          <p class="contacts__adress">г. Санкт Петербург, ул.&nbsp;Большая&nbsp;Конюшенная,&nbsp;19/8</p>
           <a class="contacts__phone" href="tel:+78002000000">8-800-200-00-00</a>
         </div>
       </section>
@@ -322,16 +329,16 @@
 
       <div class="footer__menu">
         <ul class="footer__list">
-          <li class="footer__item">Преимущества </li>
-          <li class="footer__item">Направления</li>
-          <li class="footer__item">Ближайшие круизы</li>
-          <li class="footer__item">Контакты</li>
+          <li><a href="#">Преимущества</a></li>
+          <li><a href="#">Направления</a></li>
+          <li><a href="#">Ближайшие круизы</a></li>
+          <li><a href="#">Контакты</a></li>
         </ul>
       </div>
 
       <div class="footer__social">
         <ul class="footer__list">
-          <li class="footer__item">
+          <li>
             <a href="#">
               <svg class="footer__social-image footer__social-image--desktop" width="11" height="20">
                 <use xlink:href="img/sprite_auto.svg#facebook"></use>
@@ -341,7 +348,7 @@
               </svg>
             </a>
           </li>
-          <li class="footer__item">
+          <li>
             <a href="#">
               <svg class="footer__social-image footer__social-image--desktop" width="20" height="20">
                 <use xlink:href="img/sprite_auto.svg#instagram"></use>
@@ -351,7 +358,7 @@
               </svg>
             </a>
           </li>
-          <li class="footer__item">
+          <li>
             <a href="#">
               <svg class="footer__social-image footer__social-image--desktop" width="20" height="16">
                 <use xlink:href="img/sprite_auto.svg#twitter"></use>
